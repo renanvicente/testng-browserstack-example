@@ -1,0 +1,20 @@
+{
+  "server": "hub-cloud.browserstack.com",
+  "user": "marceloagostinho1",
+  "key": "LsvzukhU53pvHWEBAKUG",
+
+  "capabilities": {
+    "build": "testng-browserstack",
+    "name": "single_appium_test",
+    "browserstack.debug": true
+  },
+
+  "environments": {
+    "chrome": {
+      "browser": "chrome"
+    }
+  },
+  "dependencies": {
+    "wdio-browserstack-reporter": "~1.0.0"
+  }
+}
