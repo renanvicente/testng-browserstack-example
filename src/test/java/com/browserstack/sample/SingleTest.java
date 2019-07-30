@@ -13,12 +13,11 @@ public class SingleTest extends BrowserStackTestNGTest {
     public void test() throws Exception {
         driver.get("https://www.google.com/ncr");
         WebElement element = driver.findElement(By.name("q"));
-        element.sendKeys("BrowserStack");
+        element.sendKeys("it works");
         element.submit();
         Thread.sleep(5000);
 
-        Assert.assertEquals("BrowserStack - Google Search", driver.getTitle());
-//        assertEquals("dasdasdasda - dsadasda", driver.getTitle());
+        Assert.assertEquals("it works - Google Search", driver.getTitle());
 
     }
 }
