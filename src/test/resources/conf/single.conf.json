@@ -6,7 +6,8 @@
   "capabilities": {
     "build": "testng-browserstack",
     "name": "single_appium_test",
-    "browserstack.debug": true
+    "browserstack.debug": true,
+    "browserstack.appiumLogs": true
   },
 
   "environments": {
