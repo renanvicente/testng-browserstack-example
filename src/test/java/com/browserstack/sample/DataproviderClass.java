@@ -30,6 +30,11 @@ public class DataproviderClass {
 
         JsonElement jsonData = new JsonParser().parse(new FileReader("parameters.json"));
         JsonElement dataSet = jsonData.getAsJsonObject().get("testParameters");
+        /**
+         * Convert dataSet to a List of TestData
+         * https://static.javadoc.io/com.google.code.gson/gson/2.6.2/com/google/gson/reflect/TypeToken.html
+         * */
+
         List<TestData> testData = new Gson().fromJson(dataSet, new TypeToken<List<TestData>>() {
         }.getType());
         Object[][] returnValue = new Object[testData.size()][1];
