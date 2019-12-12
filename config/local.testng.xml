@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Local">
+    <listeners>
+        <listener class-name="team.zag.testng.reporter.THUBTestsReporter" />
+    </listeners>
+
     <test name="LocalTest">
         <parameter name="config" value="local.conf.json"/>
         <parameter name="environment" value="chrome"/>

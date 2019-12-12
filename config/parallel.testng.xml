@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Parallel" thread-count="4" parallel="tests">
+    <listeners>
+        <listener class-name="team.zag.testng.reporter.THUBTestsReporter" />
+    </listeners>
+
     <test name="SingleTestChrome">
         <parameter name="config" value="parallel.conf.json"/>
         <parameter name="environment" value="chrome"/>
@@ -16,7 +20,7 @@
             <class name="com.browserstack.sample.SingleTest"/>
         </classes>
     </test>
-    
+
     <test name="SingleTestIE">
         <parameter name="config" value="parallel.conf.json"/>
         <parameter name="environment" value="ie"/>
