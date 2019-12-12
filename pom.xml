@@ -17,6 +17,10 @@
         <surefire.version>2.19.1</surefire.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+
+        <test.file></test.file>
+        <config.file>default</config.file>
+
     </properties>
 
 
@@ -103,6 +107,7 @@
                     <target>${maven.compiler.target}</target>
                 </configuration>
             </plugin>
+
             <!--            <plugin>-->
             <!--                &lt;!&ndash; TODO move away from snapshot build once a fix is released on aspectj-maven-plugin &ndash;&gt;-->
             <!--                <groupId>com.github.m50d</groupId>-->

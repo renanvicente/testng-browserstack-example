@@ -3,8 +3,12 @@ package com.browserstack.sample;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.annotations.Test;
+import static team.zag.testng.utils.IConstants.SESSION_ID;
+
 
 import java.util.concurrent.TimeUnit;
 
@@ -12,7 +16,8 @@ public class SingleTest extends BrowserStackTestNGTest {
 
 
     @Test(dataProvider="getData",dataProviderClass=DataproviderClass.class)
-    public void test(TestData data) throws InterruptedException {
+    public void test(TestData data, ITestContext context) throws InterruptedException {
+        context.setAttribute(SESSION_ID, ((RemoteWebDriver)driver).getSessionId().toString());
 
         String author = "";
         String searchKey = "";
