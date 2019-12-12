@@ -16,15 +16,7 @@
             <class name="com.browserstack.sample.SingleTest"/>
         </classes>
     </test>
-
-    <test name="SingleTestSafari">
-        <parameter name="config" value="parallel.conf.json"/>
-        <parameter name="environment" value="safari"/>
-        <classes>
-            <class name="com.browserstack.sample.SingleTest"/>
-        </classes>
-    </test>
-
+    
     <test name="SingleTestIE">
         <parameter name="config" value="parallel.conf.json"/>
         <parameter name="environment" value="ie"/>
